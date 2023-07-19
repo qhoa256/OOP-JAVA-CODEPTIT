@@ -1,11 +1,11 @@
-package J05028_DANH_SACH_DOANH_NGHIEP_NHAN_SINH_VIEN_THUC_TAP_1;
+package J05029_DANH_SACH_DOANH_NGHIEP_NHAN_SINH_VIEN_THUC_TAP_2;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class J05028 {
+public class J05029 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<doanhNghiep> dn = new ArrayList<>();
@@ -22,8 +22,15 @@ public class J05028 {
                 else return o1.getMaDN().compareTo(o2.getMaDN());
             }
         });
-        for (doanhNghiep x : dn) {
-            System.out.println(x);
+        int q = sc.nextInt();
+        while (q-- > 0) {
+            int a = sc.nextInt(), b = sc.nextInt();
+            System.out.println("DANH SACH DOANH NGHIEP NHAN TU " + a + " DEN " + b + " SINH VIEN:");
+            for (doanhNghiep x : dn) {
+                if (x.getSoLuong() >= a && x.getSoLuong() <= b) {
+                    System.out.println(x);
+                }
+            }
         }
     }
 }

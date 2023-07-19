@@ -1,4 +1,4 @@
-package J05028_DANH_SACH_DOANH_NGHIEP_NHAN_SINH_VIEN_THUC_TAP_1;
+package J05029_DANH_SACH_DOANH_NGHIEP_NHAN_SINH_VIEN_THUC_TAP_2;
 
 public class doanhNghiep {
     private String maDN, tenDN;
