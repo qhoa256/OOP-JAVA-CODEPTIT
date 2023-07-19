@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KHAI BAO LOP VA DOI TUONG/KHAI BAO LOP VA DOI TUONG.iml" filepath="$PROJECT_DIR$/KHAI BAO LOP VA DOI TUONG/KHAI BAO LOP VA DOI TUONG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAP TRINH HUONG DOI TUONG - CODEPTIT.iml" filepath="$PROJECT_DIR$/LAP TRINH HUONG DOI TUONG - CODEPTIT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAP TRINH JAVA CO BAN/LAP TRINH JAVA CO BAN.iml" filepath="$PROJECT_DIR$/LAP TRINH JAVA CO BAN/LAP TRINH JAVA CO BAN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MANG/MANG.iml" filepath="$PROJECT_DIR$/MANG/MANG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MANG DOI TUONG/MANG DOI TUONG.iml" filepath="$PROJECT_DIR$/MANG DOI TUONG/MANG DOI TUONG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XAU KY TU/XAU KY TU.iml" filepath="$PROJECT_DIR$/XAU KY TU/XAU KY TU.iml" />
+    </modules>
+  </component>
+</project>
