@@ -8,18 +8,19 @@ public class J02014 {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            int[] a = new int[1005];
-            int[] F = new int[1005];
-            for (int i = 0; i < n; i++) {
+            int[] a = new int[n + 1];
+            int[] F = new int[n + 1];
+            for (int i = 1; i <= n; i++) {
                 a[i] = sc.nextInt();
-                if (i == 0) F[i] = a[i];
+                if (i == 1) F[i] = a[i];
                 else F[i] = F[i - 1] + a[i];
             }
             boolean ok = false;
-            for (int i = 1; i < n - 1; i++) {
-                if (F[i - 1] == (F[n - 1] - F[i])) {
+            for (int i = 1; i <= n; i++) {
+                if (F[i] == (F[n] - F[i - 1])) {
                     ok = true;
-                    System.out.print((i + 1) + " ");
+                    System.out.print(i + " ");
+                    break;
                 }
             }
             if (!ok) System.out.print(-1);
