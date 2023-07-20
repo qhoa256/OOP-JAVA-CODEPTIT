@@ -1,4 +1,4 @@
-package J05043_TINH_THU_NHAP_CHO_NHAN_VIEN;
+package J05045_SAP_XEP_NHAN_VIEN_THEO_THU_NHAP;
 
 public class nhanVien {
     private String maNV, hoTen, chucVu;
@@ -13,6 +13,10 @@ public class nhanVien {
         this.chucVu = chucVu;
         this.luongCB = luongCB;
         this.ngayCong = ngayCong;
+    }
+
+    public String getMaNV() {
+        return maNV;
     }
 
     public double phuCap() {
@@ -35,6 +39,10 @@ public class nhanVien {
         } else {
             return 25000;
         }
+    }
+
+    public double thuNhap() {
+        return this.luongCB * this.ngayCong + phuCap();
     }
 
     public String toString() {

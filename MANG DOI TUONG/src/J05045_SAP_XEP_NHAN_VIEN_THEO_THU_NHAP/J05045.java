@@ -1,9 +1,10 @@
-package J05043_TINH_THU_NHAP_CHO_NHAN_VIEN;
+package J05045_SAP_XEP_NHAN_VIEN_THEO_THU_NHAP;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
-public class J05043 {
+public class J05045 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
@@ -12,7 +13,8 @@ public class J05043 {
             sc.nextLine();
             nv.add(new nhanVien("NV" + String.format("%02d", i + 1), sc.nextLine(), sc.nextLine(), sc.nextDouble(), sc.nextDouble()));
         }
-        for(nhanVien x:nv){
+        Collections.sort(nv, new SortNV());
+        for (nhanVien x : nv) {
             System.out.println(x);
         }
     }
