@@ -23,9 +23,9 @@ public class J02020 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt(), y = sc.nextInt();
-        n = x;
-        k = y;
+        int a = sc.nextInt(), b = sc.nextInt();
+        n = a;
+        k = b;
         Try(1);
         System.out.println("Tong cong co " + cnt + " to hop");
     }
