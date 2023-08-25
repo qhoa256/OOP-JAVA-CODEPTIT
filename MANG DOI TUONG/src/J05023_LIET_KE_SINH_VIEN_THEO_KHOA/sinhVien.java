@@ -13,8 +13,8 @@ public class sinhVien {
         this.email = email;
     }
 
-    public String getMaSV() {
-        return this.maSV;
+    public String getLop() {
+        return this.lop;
     }
 
     public String toString() {

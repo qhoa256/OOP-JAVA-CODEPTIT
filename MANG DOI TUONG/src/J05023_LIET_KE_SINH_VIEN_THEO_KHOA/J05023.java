@@ -17,7 +17,7 @@ public class J05023 {
             String khoa = sc.next();
             System.out.println("DANH SACH SINH VIEN KHOA " + khoa + ":");
             for (sinhVien x : sv) {
-                if (x.getMaSV().substring(1, 3).contentEquals(khoa.substring(2))) {
+                if (x.getLop().substring(1, 3).contentEquals(khoa.substring(2))) {
                     System.out.println(x);
                 }
             }
