@@ -1,10 +1,8 @@
 package DOC_FILE_NHI_PHAN_1;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.TreeSet;
 
 public class Main {

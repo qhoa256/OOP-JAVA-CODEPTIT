@@ -1,25 +1,25 @@
 package KIEM_TRA_CHIA_HET;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(new File("SONGUYEN.IN"));
         int t = sc.nextInt();
         BigInteger seven = new BigInteger("7");
         BigInteger thirteen = new BigInteger("13");
         while (t-- > 0) {
             BigInteger x = sc.nextBigInteger();
-            if(x.mod(seven).toString().compareTo("0")==0 && x.mod(thirteen).toString().compareTo("0")==0){
+            if (x.mod(seven).toString().compareTo("0") == 0 && x.mod(thirteen).toString().compareTo("0") == 0) {
                 System.out.println("Both");
-            }else if(x.mod(seven).toString().compareTo("0")==0){
+            } else if (x.mod(seven).toString().compareTo("0") == 0) {
                 System.out.println("Div 7");
-            }else if(x.mod(thirteen).toString().compareTo("0")==0){
+            } else if (x.mod(thirteen).toString().compareTo("0") == 0) {
                 System.out.println("Div 13");
-            }else{
+            } else {
                 System.out.println("None");
             }
         }
