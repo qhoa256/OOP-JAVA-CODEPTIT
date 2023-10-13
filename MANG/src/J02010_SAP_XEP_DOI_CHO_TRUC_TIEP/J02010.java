@@ -1,9 +1,8 @@
-package J02011_SAP_XEP_CHON;
+package J02010_SAP_XEP_DOI_CHO_TRUC_TIEP;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class J02011 {
+public class J02010 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -12,14 +11,12 @@ public class J02011 {
             a[i] = sc.nextInt();
         }
         for (int i = 0; i < n - 1; i++) {
-            int k = i;
             for (int j = i + 1; j < n; j++)
-                if (a[j] < a[k]) {
-                    k = j;
+                if (a[j] < a[i]) {
+                    int tmp = a[i];
+                    a[i] = a[j];
+                    a[j] = tmp;
                 }
-            int tmp = a[i];
-            a[i] = a[k];
-            a[k] = tmp;
             System.out.printf("Buoc %d: ", i + 1);
             for (int j = 0; j < n; j++) {
                 System.out.print(a[j] + " ");
