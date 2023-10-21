@@ -1,0 +1,7 @@
+[BeginLog]
+[Boot Session: 2023/01/31
+10:22:00.500]
+09:50:44.356 WINWORD (0X1X2)
+Section 02/09/2023 10:22:16, 538 new
+[xxxxxxxx] 10:22:16.569
+Start 14:17:50.111over
