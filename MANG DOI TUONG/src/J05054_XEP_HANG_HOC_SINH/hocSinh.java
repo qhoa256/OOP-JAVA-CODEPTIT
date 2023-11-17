@@ -25,6 +25,10 @@ public class hocSinh {
         this.xepHang = xepHang;
     }
 
+    public double getXepHang() {
+        return xepHang;
+    }
+
     public String xepLoai() {
         if (this.diemTB >= 9)
             return "Gioi";

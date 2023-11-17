@@ -22,18 +22,12 @@ public class J05054 {
                 else return 1;
             }
         });
-        double xh = 0.0;
-        double tmp = 0.0;
-        double num = 1.0;
-        for (hocSinh x : hs) {
-            if (x.getDiemTB() != tmp) {
-                xh += num;
-                x.setXepHang(xh);
-                tmp = x.getDiemTB();
+        hs.get(0).setXepHang(1);
+        for (int i = 1; i < n; i++) {
+            if (hs.get(i).getDiemTB() == hs.get(i - 1).getDiemTB()) {
+                hs.get(i).setXepHang(hs.get(i - 1).getXepHang());
             } else {
-                num++;
-                x.setXepHang(xh);
-                tmp = x.getDiemTB();
+                hs.get(i).setXepHang(i + 1);
             }
         }
         Collections.sort(hs, new Comparator<hocSinh>() {
@@ -47,3 +41,11 @@ public class J05054 {
         }
     }
 }
+
+//3
+//Tran Minh Hieu
+//5.9
+//Nguyen Bao Trung
+//8.6
+//Le Hong Ha
+//9.2
