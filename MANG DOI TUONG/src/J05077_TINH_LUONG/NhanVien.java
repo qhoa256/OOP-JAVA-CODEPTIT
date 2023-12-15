@@ -1,18 +1,14 @@
 package J05077_TINH_LUONG;
 
-public class SinhVien {
+public class NhanVien {
     private String maNV, hoTen, phongBan;
     private int luongCB, soNgay;
 
-    public SinhVien(String maNV, String hoTen, int luongCB, int soNgay) {
+    public NhanVien(String maNV, String hoTen, int luongCB, int soNgay) {
         this.maNV = maNV;
         this.hoTen = hoTen;
         this.luongCB = luongCB;
         this.soNgay = soNgay;
-    }
-
-    public String getPhongBan() {
-        return phongBan;
     }
 
     public void setPhongBan(String phongBan) {

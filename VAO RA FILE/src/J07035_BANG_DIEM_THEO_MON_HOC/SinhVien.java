@@ -1,37 +1,56 @@
 package J07035_BANG_DIEM_THEO_MON_HOC;
 
-public class sinhVien {
-    private String maSV, hoTen, lop, email;
+public class SinhVien implements Comparable<SinhVien> {
+    private String maSV, tenSV, lop, email;
+    private String maMH;
+    private double diem;
 
-    public sinhVien(String maSV, String hoTen, String lop, String email) {
+    public SinhVien(String maSV, String tenSV, String lop, String email) {
         this.maSV = maSV;
-        this.hoTen = hoTen;
+        this.tenSV = chuanHoa(tenSV);
         this.lop = lop;
         this.email = email;
     }
 
-    public void chuanHoa() {
-        String s = this.hoTen;
-        s = s.trim().toLowerCase();
-        String res = "" + Character.toUpperCase(s.charAt(0));
-        for (int i = 1; i < s.length(); i++) {
-            if (Character.isLetter(s.charAt(i))) {
-                if (s.charAt(i - 1) == ' ') res += " " + Character.toUpperCase(s.charAt(i));
-                else res += s.charAt(i);
+    private String chuanHoa(String s) {
+        String[] arr = s.trim().split("\\s+");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length; ++i) {
+            sb.append(Character.toUpperCase(arr[i].charAt(0)));
+            for (int j = 1; j < arr[i].length(); ++j) {
+                sb.append(Character.toLowerCase(arr[i].charAt(j)));
             }
+            sb.append(" ");
         }
-        this.hoTen = res;
+        return sb.toString().trim();
     }
 
-    public String getMaSV() {
-        return maSV;
+    public void setMaMH(String s) {
+        this.maMH = s;
     }
 
-    public String getHoTen() {
-        return hoTen;
+    public void setDiem(double x) {
+        this.diem = x;
     }
 
-    public String getLop() {
-        return lop;
+    public String getMaMH() {
+        return maMH;
+    }
+
+    public String toString() {
+        if ((int) diem == diem)
+            return maSV + " " + tenSV + " " + lop + " " + (int) diem;
+        else
+            return maSV + " " + tenSV + " " + lop + " " + diem;
+    }
+
+
+    @Override
+    public int compareTo(SinhVien o) {
+        if (this.maMH.equals(o.maMH)) {
+            if (this.diem < o.diem) return 1;
+            else if (this.diem > o.diem) return -1;
+            else return this.maSV.compareTo(o.maSV);
+        } else return this.maMH.compareTo(o.maMH);
     }
 }

@@ -1,4 +1,4 @@
-package J05065_LIET_KE_SINH_VIEN_THEO_NHOM;
+package J05065_LIET_KE_NHAN_VIEN_THEO_NHOM;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +19,7 @@ public class J05065 {
                 res.append(s[i]);
                 if (i != s.length - 1) res.append(" ");
             }
-            String id = maNV.substring(0, 3);
+            String id = maNV.substring(0, 2);
             if (id.equals("GD")) {
                 if (giamDoc > 0) {
                     giamDoc--;
@@ -28,8 +28,7 @@ public class J05065 {
                     x.append(maNV.substring(2));
                     maNV = x.toString();
                 }
-            }
-            if (id.equals("TP")) {
+            } else if (id.equals("TP")) {
                 if (truongPhong > 0) {
                     truongPhong--;
                 } else {
@@ -37,8 +36,7 @@ public class J05065 {
                     x.append(maNV.substring(2));
                     maNV = x.toString();
                 }
-            }
-            if (id.equals("PP")) {
+            } else if (id.equals("PP")) {
                 if (phoPhong > 0) {
                     phoPhong--;
                 } else {
@@ -47,14 +45,15 @@ public class J05065 {
                     maNV = x.toString();
                 }
             }
+//            System.out.println(maNV + " " + res);
             nv.add(new NhanVien(maNV, res.toString()));
         }
         Collections.sort(nv, new Comparator<NhanVien>() {
             @Override
             public int compare(NhanVien o1, NhanVien o2) {
-                if(!o1.bacLuong().equals(o2.bacLuong())){
+                if (!o1.bacLuong().equals(o2.bacLuong())) {
                     return o2.bacLuong().compareTo(o1.bacLuong());
-                }else{
+                } else {
                     return o1.soHieu().compareTo(o2.soHieu());
                 }
             }
@@ -84,3 +83,15 @@ public class J05065 {
 //2
 //TP
 //PP
+
+//6
+//GD08001 Nguyen Kim Loan
+//GD05002 Hoang Thanh Tuan
+//TP05001 Tran Binh Nguyen
+//TP06002 Phan Trung Tuan
+//TP06001 Tran Quoc Huy
+//TP04003 Vo Van Lan
+//3
+//TP
+//GD
+//NV

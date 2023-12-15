@@ -7,6 +7,7 @@ public class thiSinh {
     public thiSinh(String maTS, String hoTen, double diemToan, double diemLy, double diemHoa) {
         this.maTS = maTS;
         this.hoTen = hoTen;
+        chuanHoa();
         this.diemToan = diemToan;
         this.diemLy = diemLy;
         this.diemHoa = diemHoa;
@@ -14,17 +15,17 @@ public class thiSinh {
 
     public void chuanHoa() {
         String[] x = hoTen.trim().split("\\s+");
-        String res = "";
+        StringBuilder res = new StringBuilder("");
         for (int i = 0; i < x.length; i++) {
-            res += Character.toUpperCase(x[i].charAt(0));
+            res.append(Character.toUpperCase(x[i].charAt(0)));
             for (int j = 1; j < x[i].length(); j++) {
-                res += Character.toLowerCase(x[i].charAt(j));
+                res.append(Character.toLowerCase(x[i].charAt(j)));
             }
             if (i != x.length - 1) {
-                res += " ";
+                res.append(" ");
             }
         }
-        hoTen = res;
+        hoTen = res.toString();
     }
 
     public double uuTien() {
@@ -39,21 +40,20 @@ public class thiSinh {
     }
 
     public double xetTuyen() {
-        return this.diemToan + this.diemHoa + this.diemLy + uuTien();
+        return this.diemToan * 2 + this.diemHoa + this.diemLy + uuTien();
     }
 
-    public void out() {
-        chuanHoa();
-        System.out.print(this.maTS + " " + this.hoTen + " ");
-        if(uuTien() == (int)uuTien()){
-            System.out.print((int)uuTien() + " ");
-        }else{
-            System.out.println(String.format("%.1f", uuTien()) + " ");
+    public String toString() {
+        String tmp = "";
+        if (uuTien() != 1.0) {
+            tmp += uuTien();
+        } else {
+            tmp += "1";
         }
-        if(xetTuyen() == (int)xetTuyen()){
-            System.out.println((int)(xetTuyen())+" ");
-        }else{
-            System.out.println(String.format("%.1f", xetTuyen())+" ");
+        if (xetTuyen() == (int) xetTuyen()) {
+            return this.maTS + " " + this.hoTen + " " + tmp + " " + (int) xetTuyen() + " ";
+        } else {
+            return this.maTS + " " + this.hoTen + " " + tmp + " " + String.format("%.1f", xetTuyen()) + " ";
         }
     }
 }

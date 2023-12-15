@@ -1,4 +1,4 @@
-package J05065_LIET_KE_SINH_VIEN_THEO_NHOM;
+package J05065_LIET_KE_NHAN_VIEN_THEO_NHOM;
 
 public class NhanVien {
     private String maNV, hoTen;

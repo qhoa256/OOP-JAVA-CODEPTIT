@@ -1,7 +1,6 @@
-package J05071_TINH_CUOC_DIEN_THOAI_CO_DINH;
+package J05071_TINH_CUOC_DIEN_THOAI_CO_DINH_1;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class J05071 {
